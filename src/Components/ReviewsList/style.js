@@ -11,5 +11,6 @@ export const NameTitle = styled(Text)`
 
 export const ReviewContainer = styled(Box)`
   display: inline-block;
-  margin: 2.3em 2.3em 0 0;
+  // margin: 2.3em 2.3em 0 0;
+  margin: 2.3em
 `

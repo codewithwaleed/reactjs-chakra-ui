@@ -16,7 +16,7 @@ const Main = () => {
         const array = []
         Reviews.forEach((value) => {
             array.push(
-                <ReviewContainer boxShadow="2xl" p="6" rounded="md" mx="auto" w="30%" bg="brand.500">
+                <ReviewContainer boxShadow="2xl" p="6" rounded="md" ms="auto" w="30%" bg="brand.500">
                     <Box>
                         <Center>
                             <Avatar size={size} loading="lazy" showBorder={true} name="Dan Abrahmov" src={value.imageUrl} />
