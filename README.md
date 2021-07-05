@@ -6,4 +6,4 @@
 ###### Next version is coming soon with more addons in this combination.
 
 ###### Packages are already listed in Package.json. All you need to do is run following commands `npm install` and then `npm start`.
-###### To run manually lint command simply run `npm lint`.
+###### To run manually lint command simply run `npm run lint`.

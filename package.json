@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open",
     "build": "webpack",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "reactjs",
@@ -16,7 +17,10 @@
     "chakra",
     "styledcomponent"
   ],
-  "author": "Waleed Ahmed",
+  "author": {
+    "name": "Waleed Ahmed",
+    "url": "https://github.com/codewithwaleed"
+  },
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -46,6 +50,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.41.3",
     "webpack-cli": "^3.3.10",
