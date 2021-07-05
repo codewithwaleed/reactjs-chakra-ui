@@ -6,8 +6,6 @@
 ###### Packages are already listed in Package.json. All you need to do is run following commands `npm install` and then `npm start`.
 ###### To run manually lint command simply run `npm run lint`.
 
-###### You can create react application manually as well as with command of `npx create-react-app my-app`, in order to run this command you should have run `npm install -g create-react-app`
-
 ### BreakPoints
 ###### One of the easist approach in chakra to handle responsiveness of your application is breakpoints like: 
 
