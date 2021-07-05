@@ -4,3 +4,6 @@
 ###### Eslint is also configured in it.
 
 ###### Next version is coming soon with more addons in this combination.
+
+###### Packages are already listed in Package.json. All you need to do is run `npm start`
+###### To run manually lint command simply run `npm lint`
