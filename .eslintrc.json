@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-extra-boolean-cast": 0,
+    "no-unreachable": 1,
+    "react/no-deprecated": 1,
+    "react/self-closing-comp": 0,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-uses-react": 1,
+    "spaced-comment": [
+      0
+    ],
+    "class-methods-use-this": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "no-restricted-syntax": 0,
+    "react/jsx-closing-tag-location": 0,
+    "arrow-parens": 0,
+    "react/prefer-stateless-function": 0,
+    "react/require-default-props": 0,
+    "jsx-a11y/img-redundant-alt": 0,
+    "jsx-a11y/interactive-supports-focus": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "no-mixed-operators": 0,
+    "react/no-array-index-key": 0,
+    "no-underscore-dangle": 1,
+    "space-before-blocks": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-return-assign": 0,
+    "no-case-declarations": 0,
+    "function-paren-newline": 0,
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/prop-types": [
+      0
+    ],
+    "no-console": "off",
+    "no-class-assign": "off",
+    "react/react-in-jsx-scope": "off",
+    "quotes": [
+      1,
+      "single"
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
