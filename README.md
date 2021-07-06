@@ -36,6 +36,28 @@
 
 ###### One more example is as follow you can have in your code `const size = useBreakpointValue({ base: 'md', lg: 'xl' })` and then you can use as `<Avatar size={size} loading="lazy" showBorder={true} name="Dan Abrahmov" src={value.imageUrl} />` so the value of md and xl will be picked from themes.js. 
 
+### Dark Mode
+###### Chakra it self provide Dark Mode feature, behind the scene they are using statement management for it but for developers its very easy to use, for example in this case we have 
+```
+export const bgColorMode = { light: 'brand.600', dark: 'brand.900' };
+export const baseColorMode = { light: 'brand.500', dark: 'brand.500' };
+```
+
+###### Later in my different componenet it can be used as follow: 
+```
+So its simple to use it as follow:
+import { useColorMode } from '@chakra-ui/react';
+import { bgColorMode, baseColorMode } from '../../Utils/common';
+const { colorMode } = useColorMode();
+
+below is the line you can add in your container
+
+bg={bgColorMode[colorMode]}
+
+while my button is added in my header section which is generic for whole applicatoin:
+<CgDarkMode p={2} cursor='pointer' bg='white' color='white' margin="auto" onClick={toggleColorMode} />
+```
+
 ### Demo url: https://codewithwaleed.github.io/reactjs-chakra-ui/
 
 
