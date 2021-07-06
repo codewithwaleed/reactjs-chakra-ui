@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'; // eslint-disable-line
-import { Box, Avatar, useBreakpointValue, Text, Center } from '@chakra-ui/react';
+import { Box, Avatar, useBreakpointValue, Text, Center, useColorMode } from '@chakra-ui/react';
 import { ReviewContainer } from './style'
 import Reviews from './Reviews.json' /* In real senario this data will be coming from api. */
+import { bgColorMode, baseColorMode } from '../../Utils/common';
 
 const Main = () => {
+    const { colorMode } = useColorMode();
     const size = useBreakpointValue({ base: 'md', lg: 'xl' })
     const textSize = useBreakpointValue({ base: 'lg', lg: 'xl' })
     const [card, setCard] = useState([])
 
     useEffect(() => {
-        iterateData() /* it means that whenever component will load it will iterate your data on front end. */
+        card.length === 0 && iterateData() /* it means that whenever component will load it will iterate your data on front end. */
     });
 
     function iterateData() {
@@ -34,7 +36,7 @@ const Main = () => {
         setCard(array);
     }
     return (
-        <Box bg="brand.600" p={10} textAlign="center" alignItems="center" justifyContent="space-between" color="white">
+        <Box bg={bgColorMode[colorMode]} p={10} textAlign="center" alignItems="center" justifyContent="space-between" color="white">
             {card}
         </Box>
     )

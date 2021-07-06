@@ -2,6 +2,8 @@ import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 
 export const properties = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
   colors: {
     brand: {
       900: '#1a365d',

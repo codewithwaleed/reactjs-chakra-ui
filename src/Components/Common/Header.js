@@ -7,24 +7,28 @@ import {
   Text,
   Button,
   useDisclosure,
-  useBreakpointValue
+  useBreakpointValue,
+  useColorMode
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-
+import { CgDarkMode } from 'react-icons/cg';
+import { bgColorMode, baseColorMode } from '../../Utils/common';
 const Header = (props) => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const hamBurderIconDisplay = useBreakpointValue({ lg: 'none' })
   const stackDisplay = useBreakpointValue({ base: isOpen ? 'block' : 'none', lg: 'flex' })
-  const menuItemBgColor = useBreakpointValue({ lg: 'brand.600', base: 'brand.500' })
   const menuItemColor = useBreakpointValue({ lg: 'brand.500', base: 'brand.600' })
+
   return (
     <Flex
       as="nav"
       justify="space-between"
       wrap="wrap"
       padding={6}
-      bg="brand.600"
-      color="white"
+      bg={bgColorMode[colorMode]}
+      color={baseColorMode[colorMode]}
+      borderBottom="1px solid white"
       {...props}
     >
       {/* Here you can use both image or text as per your design */}
@@ -50,9 +54,9 @@ const Header = (props) => {
         mt={{ base: 4, lg: 0 }}
       >
 
-        <Text bg={menuItemBgColor} color={menuItemColor} cursor="pointer" p={4}>Menu Item 1</Text>
-        <Text bg={menuItemBgColor} color={menuItemColor} cursor="pointer" p={4}>Menu Item 2</Text>
-        <Text bg={menuItemBgColor} color={menuItemColor} cursor="pointer" p={4}>Menu Item 3</Text>
+        <Text bg={bgColorMode[colorMode]} color={menuItemColor} cursor="pointer" p={4}>Menu Item 1</Text>
+        <Text bg={bgColorMode[colorMode]} color={menuItemColor} cursor="pointer" p={4}>Menu Item 2</Text>
+        <Text bg={bgColorMode[colorMode]} color={menuItemColor} cursor="pointer" p={4}>Menu Item 3</Text>
         <Button
           variant="outline"
           _hover={{ bg: 'brand.500', borderColor: 'brand.600', color: 'brand.600' }}
@@ -66,6 +70,10 @@ const Header = (props) => {
         display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}
       >
+      </Box>
+
+      <Box width="2%" margin="auto" >
+        <CgDarkMode p={2} cursor='pointer' bg='white' color='white' margin="auto" onClick={toggleColorMode} />
       </Box>
     </Flex >
   );
