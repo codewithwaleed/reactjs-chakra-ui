@@ -6,8 +6,23 @@
 ###### Packages are already listed in Package.json. All you need to do is run following commands `npm install` and then `npm start`.
 ###### To run manually lint command simply run `npm run lint`.
 
+###### When we use Chakra our css work reduce to half. For example if i have to make a container which will show image, name and description then for me to apply css is very easy with chakra as it works as follow: 
 ### BreakPoints
-###### One of the easist approach in chakra to handle responsiveness of your application is breakpoints like: 
+###### One of the easist approach in chakra to handle responsiveness of your application is breakpoints like: ` <ReviewContainer key={key} boxShadow="2xl" p="6" rounded="md" ms="auto" w="30%" bg="brand.500">
+                    <Box>
+                        <Center>
+                            <Avatar size={size} loading="lazy" showBorder={true} name="Dan Abrahmov" src={value.imageUrl} />
+                        </Center>
+                        <Center>
+                            <Text fontWeight="extrabold" w="auto" pt={4} fontSize={textSize} color="brand.600">{value.name}</Text>
+                        </Center>
+                    </Box>
+                    <Box>
+                        <Text align="center" color="brand.800">{value.description}</Text>
+                    </Box>
+                
+                
+###### In above example you can see that all of the styling has been passed as props without writing the complete css as normally we do in less or sass.
 
 ###### export const breakPoints = createBreakpoints({
 ######  sm: '30em',
