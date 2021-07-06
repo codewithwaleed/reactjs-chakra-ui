@@ -70,6 +70,8 @@ export const properties = {
 }
 
 export const breakPoints = createBreakpoints({
+  base: '0em',
+  xs: '20em',
   sm: '30em',
   md: '48em',
   lg: '62em',
